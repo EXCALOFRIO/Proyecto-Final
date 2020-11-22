@@ -26,8 +26,9 @@ public class Interfaz {
 			File file = new File(nombreFichero);
 			Scanner sc = new Scanner(file);
 			while(sc.hasNext()){
-				String nombre = sc.next();
-				String nTel = sc.next();
+				String modelo = sc.next();
+				String marca = sc.next();
+				String talla = sc.next();
 				Zapatilla zapatilla = new Zapatilla(modelo, marca, talla);
 				libreta.annadirZapatilla(zapatilla);
 			}
