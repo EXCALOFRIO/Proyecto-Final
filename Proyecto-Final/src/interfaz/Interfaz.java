@@ -1,4 +1,4 @@
-package dominio;
+package interfaz;
 
 public class Interfaz {
 
