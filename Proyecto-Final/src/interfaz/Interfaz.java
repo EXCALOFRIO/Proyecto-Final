@@ -41,6 +41,23 @@ public class Interfaz {
 		return libreta;
 	}
 	
+	public static void procesarPeticion(String sentencia){
+		String[] args = sentencia.split(" ");
+		Catalogo libreta = inicializarLibreta(NOMBRE_FICHERO);
+		if(args[0].equals("help")){
+			System.out.println(HELP_TEXT);
+		} else if (args[0].equals("list")){
+			if(libreta.toString().equals("")){
+				System.out.println("No hay ningún contacto en la libreta");
+			} else {
+				System.out.println(libreta);
+			}
+		} else if (args[0].equals("add")){
+			Zapatilla zapatilla = new Zapatilla(args[1], args[2] , args[3]);
+			libreta.annadirZapatilla(zapatilla);
+			inicializarFichero(libreta);
+		}
+	}
 	
 	
 	
