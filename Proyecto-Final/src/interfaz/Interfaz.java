@@ -21,7 +21,7 @@ public class Interfaz {
 	}
 	
 	private static Catalogo inicializarLibreta(String nombreFichero){
-		Catalogo libreta = new Catalogo();
+		Catalogo catalogo = new Catalogo();
 		try{
 			File file = new File(nombreFichero);
 			Scanner sc = new Scanner(file);
@@ -30,32 +30,32 @@ public class Interfaz {
 				String marca = sc.next();
 				String talla = sc.next();
 				Zapatilla zapatilla = new Zapatilla(modelo, marca, talla);
-				libreta.annadirZapatilla(zapatilla);
+				catalogo.annadirZapatilla(zapatilla);
 			}
 			sc.close();
 		} catch (FileNotFoundException e){
-			inicializarFichero(libreta);
+			inicializarFichero(catalogo);
 		} catch (Exception e){
 			System.out.println(e);
 		}
-		return libreta;
+		return catalogo;
 	}
 	
 	public static void procesarPeticion(String sentencia){
 		String[] args = sentencia.split(" ");
-		Catalogo libreta = inicializarLibreta(NOMBRE_FICHERO);
+		Catalogo catalogo = inicializarLibreta(NOMBRE_FICHERO);
 		if(args[0].equals("help")){
 			System.out.println(HELP_TEXT);
 		} else if (args[0].equals("list")){
-			if(libreta.toString().equals("")){
+			if(catalogo.toString().equals("")){
 				System.out.println("No hay ningún contacto en la libreta");
 			} else {
-				System.out.println(libreta);
+				System.out.println(catalogo);
 			}
 		} else if (args[0].equals("add")){
 			Zapatilla zapatilla = new Zapatilla(args[1], args[2] , args[3]);
-			libreta.annadirZapatilla(zapatilla);
-			inicializarFichero(libreta);
+			catalogo.annadirZapatilla(zapatilla);
+			inicializarFichero(catalogo);
 		}
 	}
 	
