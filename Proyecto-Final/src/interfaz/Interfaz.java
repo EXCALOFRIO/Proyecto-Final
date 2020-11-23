@@ -20,7 +20,7 @@ public class Interfaz {
 		}
 	}
 	
-	private static Catalogo inicializarLibreta(String nombreFichero){
+	private static Catalogo inicializarCatalogo(String nombreFichero){
 		Catalogo catalogo = new Catalogo();
 		try{
 			File file = new File(nombreFichero);
@@ -43,7 +43,7 @@ public class Interfaz {
 	
 	public static void procesarPeticion(String sentencia){
 		String[] args = sentencia.split(" ");
-		Catalogo catalogo = inicializarLibreta(NOMBRE_FICHERO);
+		Catalogo catalogo = inicializarCatalogo(NOMBRE_FICHERO);
 		if(args[0].equals("help")){
 			System.out.println(HELP_TEXT);
 		} else if (args[0].equals("list")){
