@@ -14,17 +14,6 @@ public class Principal{
 		
 	}
 }
-			
-//System.out.println("Bienvenido quiere ver el catalogo o añadir un producto"
-//		+ "Ver catálogo = 1" + "\nAñadir un pruducto = 2");
-//Scanner sc = new Scanner(System.in);
-//int respuesta = sc.nextInt();
-//respuestaUsuario = respuesta;
-//if(respuesta == 2) {
-	
-//}
-//if (respuesta == 1) {
-	
-//}		
+		
 
 

@@ -48,7 +48,7 @@ public class Interfaz {
 			System.out.println(HELP_TEXT);
 		} else if (args[0].equals("list")){
 			if(catalogo.toString().equals("")){
-				System.out.println("No hay ningún contacto en la libreta");
+				System.out.println("No hay ningun contacto en la libreta");
 			} else {
 				System.out.println(catalogo);
 			}
