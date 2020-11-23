@@ -11,8 +11,8 @@ public class Catalogo {
 
 	public String toString(){
 		StringBuilder datos = new StringBuilder();
-		for (Zapatilla contacto : coleccionZapatillas){
-			datos.append(contacto);
+		for (Zapatilla zapatilla : coleccionZapatillas){
+			datos.append(zapatilla);
 		}
 		return datos.toString();
 	}
